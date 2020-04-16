@@ -13,6 +13,10 @@
 		0EB597232448F517007C4412 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EB597212448F517007C4412 /* Main.storyboard */; };
 		0EB597252448F518007C4412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EB597242448F518007C4412 /* Assets.xcassets */; };
 		0EB597282448F518007C4412 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EB597262448F518007C4412 /* LaunchScreen.storyboard */; };
+		0EB597312448FAA4007C4412 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB597302448FAA4007C4412 /* Dog.swift */; };
+		0EB597332448FAF7007C4412 /* DogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB597322448FAF7007C4412 /* DogTableViewCell.swift */; };
+		0EB597352448FB80007C4412 /* DogRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB597342448FB80007C4412 /* DogRepo.swift */; };
+		0EB597372448FBF4007C4412 /* DogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB597362448FBF4007C4412 /* DogTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		0EB597242448F518007C4412 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EB597272448F518007C4412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0EB597292448F518007C4412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EB597302448FAA4007C4412 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		0EB597322448FAF7007C4412 /* DogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogTableViewCell.swift; sourceTree = "<group>"; };
+		0EB597342448FB80007C4412 /* DogRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogRepo.swift; sourceTree = "<group>"; };
+		0EB597362448FBF4007C4412 /* DogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 		0EB5971A2448F517007C4412 /* TableTest03 */ = {
 			isa = PBXGroup;
 			children = (
+				0EB5972F2448FA8A007C4412 /* DogMain */,
 				0EB5971B2448F517007C4412 /* AppDelegate.swift */,
 				0EB5971D2448F517007C4412 /* SceneDelegate.swift */,
 				0EB5971F2448F517007C4412 /* ViewController.swift */,
@@ -65,6 +74,17 @@
 				0EB597292448F518007C4412 /* Info.plist */,
 			);
 			path = TableTest03;
+			sourceTree = "<group>";
+		};
+		0EB5972F2448FA8A007C4412 /* DogMain */ = {
+			isa = PBXGroup;
+			children = (
+				0EB597302448FAA4007C4412 /* Dog.swift */,
+				0EB597322448FAF7007C4412 /* DogTableViewCell.swift */,
+				0EB597342448FB80007C4412 /* DogRepo.swift */,
+				0EB597362448FBF4007C4412 /* DogTableViewController.swift */,
+			);
+			path = DogMain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +160,10 @@
 			files = (
 				0EB597202448F517007C4412 /* ViewController.swift in Sources */,
 				0EB5971C2448F517007C4412 /* AppDelegate.swift in Sources */,
+				0EB597332448FAF7007C4412 /* DogTableViewCell.swift in Sources */,
+				0EB597312448FAA4007C4412 /* Dog.swift in Sources */,
+				0EB597372448FBF4007C4412 /* DogTableViewController.swift in Sources */,
+				0EB597352448FB80007C4412 /* DogRepo.swift in Sources */,
 				0EB5971E2448F517007C4412 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +311,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3YJPPN3L39;
 				INFOPLIST_FILE = TableTest03/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +330,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3YJPPN3L39;
 				INFOPLIST_FILE = TableTest03/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
