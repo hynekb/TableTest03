@@ -46,10 +46,13 @@ class DogTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DogTableViewCell", for: indexPath) as! DogTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DogCell", for: indexPath)
 
         // Configure the cell...
-        cell.dog = allDogs[indexPath.row]
+        let dog = allDogs[indexPath.row]
+        cell.textLabel?.text = dog.name
+        cell.detailTextLabel?.text = dog.number
+        cell.imageView?.image = UIImage(named: "leaf")
         return cell
     }
     
