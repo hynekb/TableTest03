@@ -94,11 +94,20 @@
                         <viewLayoutGuide key="safeArea" id="IyE-ap-CIC"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Dog" id="N0y-mT-fr2">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ext-le-eEG"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="kiH-oC-nt8"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ext-le-eEG">
+                            <connections>
+                                <segue destination="phG-1p-7oM" kind="unwind" unwindAction="cancelToDogTableViewController:" id="bzL-9g-7P7"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="kiH-oC-nt8">
+                            <connections>
+                                <segue destination="phG-1p-7oM" kind="unwind" unwindAction="saveFromAddDog:" id="Xko-4W-NGy"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="On3-Kt-Uxv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="phG-1p-7oM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3022" y="-761"/>
         </scene>
@@ -116,16 +125,19 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Gge-hJ-XRe">
                             <connections>
                                 <action selector="unwind:" destination="4kQ-FD-tWg" id="kDh-IG-jDM"/>
+                                <segue destination="XI9-C6-cbk" kind="unwind" unwindAction="cancelToDogTableViewController:" id="K0X-fW-r53"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="emd-iV-xHA">
                             <connections>
                                 <action selector="unwind:" destination="4kQ-FD-tWg" id="tbz-Wa-0Um"/>
+                                <segue destination="XI9-C6-cbk" kind="unwind" unwindAction="saveFromEditDog:" id="ho4-jZ-u21"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rrd-La-tzu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="XI9-C6-cbk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3129" y="3"/>
         </scene>

@@ -116,8 +116,20 @@ class DogTableViewController: UITableViewController {
         viewController.dogIndex = dogIndex
         show(viewController, sender: self)
     }
-    
-    @IBAction func unwind( _ segue:UIStoryboardSegue) {
+}
+
+
+    extension DogTableViewController {
         
+      @IBAction func cancelToDogTableViewController(_ segue: UIStoryboardSegue) {
+        print("cancel from Add/Edit dog controller")
+      }
+
+      @IBAction func saveFromAddDog(_ segue: UIStoryboardSegue) {
+        print("save from Add dog controller")
+      }
+        
+     @IBAction func saveFromEditDog(_ segue: UIStoryboardSegue) {
+        print("save from Edit controller")
     }
 }
