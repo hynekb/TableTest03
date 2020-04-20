@@ -9,8 +9,12 @@
 import UIKit
 
 class DogTableViewController: UITableViewController {
+    
+    //MARK:- Variables
 
     var allDogs: [Dog] = []
+    
+    //MARK: - View controller functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +29,7 @@ class DogTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    
-    func rowSelected(index: Int) {
-        print(" row selected with \(allDogs[index])")
-    }
-    
-    func accessDisclosureTapped(index: Int) {
-         print(" disclosure tapped with \(allDogs[index])")
-    }
+
 
     // MARK: - Table view data source
 
@@ -57,11 +54,12 @@ class DogTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        rowSelected(index: indexPath.row)
+        presentAACRecViewController(dogIndex: indexPath.row)
     }
     
+    //if the acccessory disclousere is tapped, we present EditViewController
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        accessDisclosureTapped(index: indexPath.row)
+        presentEditViewController(dogIndex: indexPath.row)
     }
   
 
@@ -79,34 +77,47 @@ class DogTableViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             allDogs.remove(at:indexPath.row)
+            //TODO implement a function to delete the element from the dog file
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
  
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
-        return true
+        return false
     }
-    */
+   
 
-    /*
-    // MARK: - Navigation
+    //MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        print("prepare for segue called")
     }
-    */
-
+    
+    //
+    func presentEditViewController(dogIndex: Int){
+        
+        guard let viewController = storyboard?.instantiateViewController(withIdentifier: "EditViewController") as? EditViewController
+            else { fatalError("Unable to create EditDog View Controller")
+        }
+        viewController.dogIndex = dogIndex
+        show(viewController, sender: self)
+    }
+    
+    func presentAACRecViewController(dogIndex: Int){
+        
+        guard let viewController = storyboard?.instantiateViewController(withIdentifier: "AACRecViewController") as? AACRecViewController
+            else { fatalError("Unable to create AAVRec View Controller")
+        }
+        viewController.dogIndex = dogIndex
+        show(viewController, sender: self)
+    }
+    
+    @IBAction func unwind( _ segue:UIStoryboardSegue) {
+        
+    }
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E6C3DE0244D21D200C4EEEF /* Readme.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0E6C3DDF244D21D200C4EEEF /* Readme.rtf */; };
+		0E6C3DE3244D24F400C4EEEF /* AACRecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C3DE2244D24F400C4EEEF /* AACRecViewController.swift */; };
+		0E6C3DE5244D25BF00C4EEEF /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C3DE4244D25BF00C4EEEF /* AddViewController.swift */; };
+		0E6C3DE7244D262300C4EEEF /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C3DE6244D262300C4EEEF /* EditViewController.swift */; };
 		0EB5971C2448F517007C4412 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB5971B2448F517007C4412 /* AppDelegate.swift */; };
 		0EB5971E2448F517007C4412 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB5971D2448F517007C4412 /* SceneDelegate.swift */; };
 		0EB597202448F517007C4412 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB5971F2448F517007C4412 /* ViewController.swift */; };
@@ -14,12 +18,15 @@
 		0EB597252448F518007C4412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EB597242448F518007C4412 /* Assets.xcassets */; };
 		0EB597282448F518007C4412 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EB597262448F518007C4412 /* LaunchScreen.storyboard */; };
 		0EB597312448FAA4007C4412 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB597302448FAA4007C4412 /* Dog.swift */; };
-		0EB597332448FAF7007C4412 /* DogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB597322448FAF7007C4412 /* DogTableViewCell.swift */; };
 		0EB597352448FB80007C4412 /* DogRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB597342448FB80007C4412 /* DogRepo.swift */; };
 		0EB597372448FBF4007C4412 /* DogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB597362448FBF4007C4412 /* DogTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E6C3DDF244D21D200C4EEEF /* Readme.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Readme.rtf; sourceTree = "<group>"; };
+		0E6C3DE2244D24F400C4EEEF /* AACRecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AACRecViewController.swift; sourceTree = "<group>"; };
+		0E6C3DE4244D25BF00C4EEEF /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		0E6C3DE6244D262300C4EEEF /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		0EB597182448F517007C4412 /* TableTest03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableTest03.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB5971B2448F517007C4412 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EB5971D2448F517007C4412 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +36,6 @@
 		0EB597272448F518007C4412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0EB597292448F518007C4412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EB597302448FAA4007C4412 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
-		0EB597322448FAF7007C4412 /* DogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogTableViewCell.swift; sourceTree = "<group>"; };
 		0EB597342448FB80007C4412 /* DogRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogRepo.swift; sourceTree = "<group>"; };
 		0EB597362448FBF4007C4412 /* DogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -45,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E6C3DE1244D24B500C4EEEF /* AACRecords */ = {
+			isa = PBXGroup;
+			children = (
+				0E6C3DE2244D24F400C4EEEF /* AACRecViewController.swift */,
+			);
+			path = AACRecords;
+			sourceTree = "<group>";
+		};
 		0EB5970F2448F517007C4412 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +78,7 @@
 		0EB5971A2448F517007C4412 /* TableTest03 */ = {
 			isa = PBXGroup;
 			children = (
+				0E6C3DE1244D24B500C4EEEF /* AACRecords */,
 				0EB5972F2448FA8A007C4412 /* DogMain */,
 				0EB5971B2448F517007C4412 /* AppDelegate.swift */,
 				0EB5971D2448F517007C4412 /* SceneDelegate.swift */,
@@ -72,6 +87,7 @@
 				0EB597242448F518007C4412 /* Assets.xcassets */,
 				0EB597262448F518007C4412 /* LaunchScreen.storyboard */,
 				0EB597292448F518007C4412 /* Info.plist */,
+				0E6C3DDF244D21D200C4EEEF /* Readme.rtf */,
 			);
 			path = TableTest03;
 			sourceTree = "<group>";
@@ -80,9 +96,10 @@
 			isa = PBXGroup;
 			children = (
 				0EB597302448FAA4007C4412 /* Dog.swift */,
-				0EB597322448FAF7007C4412 /* DogTableViewCell.swift */,
 				0EB597342448FB80007C4412 /* DogRepo.swift */,
 				0EB597362448FBF4007C4412 /* DogTableViewController.swift */,
+				0E6C3DE4244D25BF00C4EEEF /* AddViewController.swift */,
+				0E6C3DE6244D262300C4EEEF /* EditViewController.swift */,
 			);
 			path = DogMain;
 			sourceTree = "<group>";
@@ -147,6 +164,7 @@
 			files = (
 				0EB597282448F518007C4412 /* LaunchScreen.storyboard in Resources */,
 				0EB597252448F518007C4412 /* Assets.xcassets in Resources */,
+				0E6C3DE0244D21D200C4EEEF /* Readme.rtf in Resources */,
 				0EB597232448F517007C4412 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,11 +178,13 @@
 			files = (
 				0EB597202448F517007C4412 /* ViewController.swift in Sources */,
 				0EB5971C2448F517007C4412 /* AppDelegate.swift in Sources */,
-				0EB597332448FAF7007C4412 /* DogTableViewCell.swift in Sources */,
+				0E6C3DE5244D25BF00C4EEEF /* AddViewController.swift in Sources */,
 				0EB597312448FAA4007C4412 /* Dog.swift in Sources */,
 				0EB597372448FBF4007C4412 /* DogTableViewController.swift in Sources */,
 				0EB597352448FB80007C4412 /* DogRepo.swift in Sources */,
+				0E6C3DE3244D24F400C4EEEF /* AACRecViewController.swift in Sources */,
 				0EB5971E2448F517007C4412 /* SceneDelegate.swift in Sources */,
+				0E6C3DE7244D262300C4EEEF /* EditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

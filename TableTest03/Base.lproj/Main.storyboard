@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="509" y="296"/>
         </scene>
-        <!--Dogs-->
+        <!--DogTableViewController-->
         <scene sceneID="TU3-fI-4yc">
             <objects>
-                <tableViewController id="fjG-lb-ahd" customClass="DogTableViewController" customModule="TableTest03" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="fjG-lb-ahd" userLabel="DogTableViewController" customClass="DogTableViewController" customModule="TableTest03" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="irh-aZ-awr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,36 +67,72 @@
                             <outlet property="delegate" destination="fjG-lb-ahd" id="peI-55-euk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Dogs" id="kgS-G2-f1J"/>
+                    <navigationItem key="navigationItem" title="Dogs" id="kgS-G2-f1J">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lKa-XY-Pqq">
+                            <connections>
+                                <segue destination="zKH-Ih-XSi" kind="show" identifier="AddViewController" id="w32-en-1se"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <segue destination="K8U-Hh-hJy" kind="show" identifier="AACRecords" id="7YF-19-f2j"/>
-                        <segue destination="4kQ-FD-tWg" kind="show" identifier="AddDog" id="tFu-hY-MuH"/>
+                        <segue destination="K8U-Hh-hJy" kind="show" identifier="AACRecViewController" id="7YF-19-f2j"/>
+                        <segue destination="4kQ-FD-tWg" kind="show" identifier="EditViewConroller" id="tFu-hY-MuH"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ng5-m1-PpD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1382" y="-368"/>
         </scene>
-        <!--Add Dog-->
+        <!--AddViewController-->
+        <scene sceneID="sFM-GZ-fdO">
+            <objects>
+                <viewController storyboardIdentifier="AddViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zKH-Ih-XSi" userLabel="AddViewController" customClass="AddViewController" customModule="TableTest03" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Fv-Pd-3HC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="IyE-ap-CIC"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Dog" id="N0y-mT-fr2">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ext-le-eEG"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="kiH-oC-nt8"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="On3-Kt-Uxv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3022" y="-761"/>
+        </scene>
+        <!--EditViewController-->
         <scene sceneID="y6I-dy-FNr">
             <objects>
-                <viewController id="4kQ-FD-tWg" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4kQ-FD-tWg" userLabel="EditViewController" customClass="EditViewController" customModule="TableTest03" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EDl-te-EVt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="alv-hl-wJn"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Dog" id="YLS-O0-Sa9"/>
+                    <navigationItem key="navigationItem" title="Edit Dog" id="YLS-O0-Sa9">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Gge-hJ-XRe">
+                            <connections>
+                                <action selector="unwind:" destination="4kQ-FD-tWg" id="kDh-IG-jDM"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="emd-iV-xHA">
+                            <connections>
+                                <action selector="unwind:" destination="4kQ-FD-tWg" id="tbz-Wa-0Um"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rrd-La-tzu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3105" y="-536"/>
+            <point key="canvasLocation" x="3129" y="3"/>
         </scene>
-        <!--AAC Records-->
+        <!--AACRecViewController-->
         <scene sceneID="mO2-bk-U5D">
             <objects>
-                <tableViewController id="K8U-Hh-hJy" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AACRecViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="K8U-Hh-hJy" userLabel="AACRecViewController" customClass="AACRecViewController" customModule="TableTest03" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="S4r-2z-P8d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,7 +152,9 @@
                             <outlet property="delegate" destination="K8U-Hh-hJy" id="GWR-Cn-gaZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="AAC Records" id="Iuz-3C-lVh"/>
+                    <navigationItem key="navigationItem" title="AAC Records" id="Iuz-3C-lVh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="SWJ-IN-cKv"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="si2-e8-DgR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
